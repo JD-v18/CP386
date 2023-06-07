@@ -19,7 +19,7 @@
 #include <sys/ipc.h>
 #include <sys/shm.h>
 #include <fcntl.h>
-#include <sys/mman.h>
+#include <sys/mman.h> 
 
 #define SHMSIZE 1024
 #define MAX_LINE_LENGTH 256
@@ -46,7 +46,7 @@ int main()
     {
         perror("shm_open");
         exit(1);
-    }
+    } 
     // Map shared memory
     if ((shm = mmap(NULL, SHMSIZE, PROT_WRITE | PROT_READ, MAP_SHARED, shmid, 0)) == MAP_FAILED)
     {
