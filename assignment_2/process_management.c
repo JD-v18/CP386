@@ -1,6 +1,6 @@
 /*
  -------------------------------------
- Assignment 1
+ Assignment 2
  File: process_management.c
  -------------------------------------
  Author:  Jidaan Dahiya / Andrew Graco
@@ -19,7 +19,7 @@
 #include <sys/ipc.h>
 #include <sys/shm.h>
 #include <fcntl.h>
-#include <sys/mman.h> 
+#include <sys/mman.h>
 
 #define SHMSIZE 1024
 #define MAX_LINE_LENGTH 256
