@@ -1,0 +1,87 @@
+The output of: free -m : is
+>>>>>>>>>>>>>>>
+               total        used        free      shared  buff/cache   available
+Mem:            7851         781        2120         349        4950        6522
+Swap:           1023           0        1023
+<<<<<<<<<<<<<<<
+The output of: ls -l -a -F : is
+>>>>>>>>>>>>>>>
+total 72
+drwxr-xr-x 11 vscode vscode   352 Jun  7 18:25 ./
+drwxr-xr-x  8 vscode vscode   256 Jun  5 17:28 ../
+-rwxr-xr-x  1 vscode vscode 17256 Jun  7 17:55 assignment_average*
+-rw-r--r--  1 vscode vscode  2228 Jun  7 11:32 assignment_average.c
+-rw-r--r--  1 vscode vscode  6148 Jun  5 17:57 .DS_Store
+-rw-r--r--  1 vscode vscode   715 Jun  5 15:56 Makefile
+-rw-r--r--  1 vscode vscode   267 Jun  7 18:33 output.txt
+-rwxr-xr-x  1 vscode vscode 18016 Jun  7 18:25 process_management*
+-rw-r--r--  1 vscode vscode  3031 Jun  7 18:25 process_management.c
+-rw-r--r--  1 vscode vscode   184 Jun  7 11:32 sample_in_grades.txt
+-rw-r--r--  1 vscode vscode    39 Jun  7 18:29 sample_in_process.txt
+<<<<<<<<<<<<<<<
+The output of: whoami : is
+>>>>>>>>>>>>>>>
+vscode
+<<<<<<<<<<<<<<<
+The output of: pwd : is
+>>>>>>>>>>>>>>>
+/workspaces/CP386/assignment_2
+<<<<<<<<<<<<<<<
+The output of: free -m : is
+>>>>>>>>>>>>>>>
+               total        used        free      shared  buff/cache   available
+Mem:            7851         778        2123         349        4950        6525
+Swap:           1023           0        1023
+<<<<<<<<<<<<<<<
+The output of: ls -l -a -F : is
+>>>>>>>>>>>>>>>
+total 72
+drwxr-xr-x 11 vscode vscode   352 Jun  7 18:25 ./
+drwxr-xr-x  8 vscode vscode   256 Jun  5 17:28 ../
+-rwxr-xr-x  1 vscode vscode 17256 Jun  7 17:55 assignment_average*
+-rw-r--r--  1 vscode vscode  2228 Jun  7 11:32 assignment_average.c
+-rw-r--r--  1 vscode vscode  6148 Jun  5 17:57 .DS_Store
+-rw-r--r--  1 vscode vscode   715 Jun  5 15:56 Makefile
+-rw-r--r--  1 vscode vscode  1439 Jun  7 18:35 output.txt
+-rwxr-xr-x  1 vscode vscode 18016 Jun  7 18:25 process_management*
+-rw-r--r--  1 vscode vscode  3031 Jun  7 18:25 process_management.c
+-rw-r--r--  1 vscode vscode   184 Jun  7 11:32 sample_in_grades.txt
+-rw-r--r--  1 vscode vscode    39 Jun  7 18:35 sample_in_process.txt
+<<<<<<<<<<<<<<<
+The output of: whoami : is
+>>>>>>>>>>>>>>>
+vscode
+<<<<<<<<<<<<<<<
+The output of: pwd : is
+>>>>>>>>>>>>>>>
+/workspaces/CP386/assignment_2
+<<<<<<<<<<<<<<<
+The output of: free -m : is
+>>>>>>>>>>>>>>>
+               total        used        free      shared  buff/cache   available
+Mem:            7851         789        2112         349        4950        6514
+Swap:           1023           0        1023
+<<<<<<<<<<<<<<<
+The output of: ls -l -a -F : is
+>>>>>>>>>>>>>>>
+total 72
+drwxr-xr-x 11 vscode vscode   352 Jun  7 18:25 ./
+drwxr-xr-x  8 vscode vscode   256 Jun  5 17:28 ../
+-rwxr-xr-x  1 vscode vscode 17256 Jun  7 17:55 assignment_average*
+-rw-r--r--  1 vscode vscode  2228 Jun  7 11:32 assignment_average.c
+-rw-r--r--  1 vscode vscode  6148 Jun  5 17:57 .DS_Store
+-rw-r--r--  1 vscode vscode   715 Jun  5 15:56 Makefile
+-rw-r--r--  1 vscode vscode  2611 Jun  7 18:36 output.txt
+-rwxr-xr-x  1 vscode vscode 18016 Jun  7 18:25 process_management*
+-rw-r--r--  1 vscode vscode  3031 Jun  7 18:25 process_management.c
+-rw-r--r--  1 vscode vscode   184 Jun  7 11:32 sample_in_grades.txt
+-rw-r--r--  1 vscode vscode    39 Jun  7 18:35 sample_in_process.txt
+<<<<<<<<<<<<<<<
+The output of: whoami : is
+>>>>>>>>>>>>>>>
+vscode
+<<<<<<<<<<<<<<<
+The output of: pwd : is
+>>>>>>>>>>>>>>>
+/workspaces/CP386/assignment_2
+<<<<<<<<<<<<<<<

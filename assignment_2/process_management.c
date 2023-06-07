@@ -24,7 +24,6 @@
 #define SHMSIZE 1024
 #define MAX_LINE_LENGTH 256
 
-// utility to print the output
 void writeOutput(char *command, char *output)
 {
     FILE *fp;
@@ -46,13 +45,15 @@ int main()
     {
         perror("shm_open");
         exit(1);
-    } 
+    }
+
     // Map shared memory
     if ((shm = mmap(NULL, SHMSIZE, PROT_WRITE | PROT_READ, MAP_SHARED, shmid, 0)) == MAP_FAILED)
     {
         perror("mmap");
         exit(1);
     }
+
     // Truncate shared memory
     if (ftruncate(shmid, SHMSIZE) == -1)
     {
@@ -86,18 +87,20 @@ int main()
 
         char *command = strtok(shm, "\n");
         while (command != NULL) {
+            int pipefd[2];
+            if (pipe(pipefd) == -1) {
+                perror("pipe");
+                exit(1);
+            }
+
             pid_t pid = fork();
             if (pid == 0) {
                 // Child process
-                int pipefd[2];
-                if (pipe(pipefd) == -1) {
-                    perror("pipe");
-                    exit(1);
-                }
-
-                dup2(pipefd[1], STDOUT_FILENO);
                 close(pipefd[0]);
-                close(pipefd[1]);
+                dup2(pipefd[1], STDOUT_FILENO);
+
+                // Trim the newline character at the end
+                command[strcspn(command, "\n")] = 0;
 
                 // Executing shell commands
                 char *args[] = {"sh", "-c", command, NULL};
@@ -105,16 +108,9 @@ int main()
                 exit(0);
             } else if (pid > 0) {
                 // Parent process
-                wait(NULL);
+                close(pipefd[1]);
 
                 // write to output file
-                int pipefd[2];
-                if (pipe(pipefd) == -1) {
-                    perror("pipe");
-                    exit(1);
-                }
-
-                close(pipefd[1]);
                 char buf[SHMSIZE];
                 int len;
                 while ((len = read(pipefd[0], buf, SHMSIZE - 1)) > 0) {
@@ -122,13 +118,12 @@ int main()
                     writeOutput(command, buf);
                 }
                 close(pipefd[0]);
-            }
 
-            // Get next command
-            command = strtok(NULL, "\n");
+                // Get next command
+                command = strtok(NULL, "\n");
+            }
         }
     }
 
     return 0;
 }
-
